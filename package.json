@@ -1,0 +1,30 @@
+{
+  "name": "@neupauer/tailwindcss-plugin-aspect-ratio",
+  "version": "0.0.1",
+  "description": "A Tailwind CSS plugin for aspect ratio.",
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "plugin",
+    "tailwindcss-plugin",
+    "aspect-ratio"
+  ],
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neupauer/tailwindcss-plugin-aspect-ratio.git"
+  },
+  "author": {
+    "name": "Peter Neupauer",
+    "url": "https://neupauer.sk"
+  },
+  "license": "MIT",
+  "scripts": {},
+  "peerDependencies": {
+    "tailwindcss": "^1.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "tailwindcss": "^1.7.6"
+  }
+}
