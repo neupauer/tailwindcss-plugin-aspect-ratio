@@ -1,16 +1,21 @@
 const plugin = require("tailwindcss/plugin");
-const map = require("lodash/map");
-const round = require("lodash/round");
+
+const round = (num, precision = 2) =>
+  Math.round((num + Number.EPSILON) * (10 ** precision)) / (10 ** precision);
 
 module.exports = plugin(
   function ({ addUtilities, theme, variants, e }) {
     const ratios = theme("aspectRatio", {});
 
-    const utilities = map(ratios, (ratio, modifier) => ({
-      [`.${e(`aspect-ratio-${modifier}`)}`]: {
-        paddingBottom: `${round(100 / (ratio || 1), 4)}%`,
-      },
-    }));
+    const utilities = [];
+
+    for (const [modifier, ratio] of Object.entries(ratios)) {
+      utilities.push({
+        [`.${e(`aspect-ratio-${modifier}`)}`]: {
+          paddingBottom: `${round(100 / (ratio || 1), 4)}%`,
+        },
+      });
+    }
 
     addUtilities(utilities, variants("aspectRatio", []));
   },
