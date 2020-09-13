@@ -32,7 +32,7 @@ module.exports = {
 
 ## Configuration
 
-By default, some common aspect ratios are provided, but you can override or expand them with `aspectRatio` key in your `tailwind.config.js` file.
+By default, some common aspect ratios are provided, but you can override or extend them with the `aspectRatio` key in your `tailwind.config.js` file.
 
 ```js
 // tailwind.config.js
@@ -58,4 +58,14 @@ module.exports = {
     aspectRatio: ["responsive"],
   },
 };
+```
+
+## Usage
+
+To achieve this, we use a simple `padding-bottom` css trick. You can read more here [W3Schools | How TO - Aspect Ratio](https://www.w3schools.com/howto/howto_css_aspect_ratio.asp).
+
+```html
+<div class="relative aspect-ratio-16/9">
+  <img src="image.jpg" class="absolute inset-0 w-full h-full object-cover" />
+</div>
 ```
