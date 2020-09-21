@@ -1,4 +1,12 @@
+<p align="center">
+  <img src="assets/logo.png" alt="Tailwind CSS Plugin – Aspect Ratio" height="100" />
+</p>
+
 # Tailwind CSS Plugin – Aspect Ratio
+
+<p align="center">
+  <img src="assets/screenshot.png" alt="Screenshot" />
+</p>
 
 ## Install
 
@@ -40,17 +48,30 @@ module.exports = {
   theme: {
     // default
     aspectRatio: {
-      "1/1": 1 / 1,
-      "2/1": 2 / 1,
-      "3/1": 3 / 1,
-      "3/2": 3 / 2,
-      "4/1": 4 / 1,
-      "4/3": 4 / 3,
-      "5/4": 5 / 4,
-      "16/9": 16 / 9,
-      "16/10": 16 / 10,
-      "19/10": 19 / 10,
-      "21/9": 21 / 9,
+      // Square
+      "1:1": 1,
+      // Landscape
+      "2:1": 2 / 1,
+      "3:1": 3 / 1,
+      "3:2": 3 / 2,
+      "4:1": 4 / 1,
+      "4:3": 4 / 3,
+      "5:4": 5 / 4,
+      "16:9": 16 / 9,
+      "16:10": 16 / 10,
+      "19:10": 19 / 10,
+      "21:9": 21 / 9,
+      // Portrait
+      "1:2": 1 / 2,
+      "1:3": 1 / 3,
+      "2:3": 2 / 3,
+      "1:4": 1 / 4,
+      "3:4": 3 / 4,
+      "4:5": 4 / 5,
+      "9:16": 9 / 16,
+      "10:16": 10 / 16,
+      "10:19": 10 / 19,
+      "9:21": 9 / 21,
     },
   },
   variants: {
@@ -62,10 +83,32 @@ module.exports = {
 
 ## Usage
 
-To achieve this, we use a simple `padding-bottom` css trick. You can read more here [W3Schools | How TO - Aspect Ratio](https://www.w3schools.com/howto/howto_css_aspect_ratio.asp).
+> The target element can only contain one child, the others will be hidden. If you need to add more child, wrap them within another element e.g., `<div>`
 
 ```html
-<div class="relative aspect-ratio-16/9">
-  <img src="image.jpg" class="absolute inset-0 w-full h-full object-cover" />
+<div class="aspect-ratio-16:9">
+  <img src="image.jpg" class="object-cover" />
+</div>
+
+<div class="aspect-ratio-16:9">
+  <div class="text-white bg-blue-500">Aspect Ration</div>
+</div>
+```
+
+
+```html
+<!-- OK -->
+<div class="aspect-ratio-16:9">
+  <div>
+    <p>Aspect</p>
+    <p>Ratio</p>
+  </div>
+</div>
+
+<!-- NOOK -->
+<div class="aspect-ratio-16:9">
+  <img src="image1.jpg" class="object-cover" /> <!-- visible-->
+  <img src="image2.jpg" class="object-cover" /> <!-- hidden-->
+  <img src="image3.jpg" class="object-cover" /> <!-- hidden-->
 </div>
 ```

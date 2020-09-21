@@ -1,6 +1,6 @@
 {
   "name": "@neupauer/tailwindcss-plugin-aspect-ratio",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A Tailwind CSS plugin for aspect ratio.",
   "keywords": [
     "tailwind",
@@ -19,11 +19,16 @@
     "url": "https://neupauer.sk"
   },
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev": "next dev demo"
+  },
   "peerDependencies": {
     "tailwindcss": "^1.0"
   },
   "devDependencies": {
+    "next": "^9.5.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "tailwindcss": "^1.8.8"
   },
   "engines": {
