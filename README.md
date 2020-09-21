@@ -10,15 +10,7 @@
 
 ## Install
 
-1. Configuring your registry settings
-
-Add `.npmrc` to have `@neupauer:registry=https://npm.pkg.github.com`:
-
-```bash
-echo '@neupauer:registry=https://npm.pkg.github.com' >> .npmrc
-```
-
-2. Install the plugin:
+1. Install the plugin:
 
 ```bash
 # Using npm
@@ -28,7 +20,7 @@ npm install @neupauer/tailwindcss-plugin-aspect-ratio --save-dev
 yarn add @neupauer/tailwindcss-plugin-aspect-ratio -D
 ```
 
-3. Add it to your `tailwind.config.js` file:
+2. Add it to your `tailwind.config.js` file:
 
 ```js
 // tailwind.config.js
