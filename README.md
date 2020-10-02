@@ -83,10 +83,9 @@ module.exports = {
 </div>
 
 <div class="aspect-ratio-16:9">
-  <div class="text-white bg-blue-500">Aspect Ration</div>
+  <div class="text-white bg-blue-500">Aspect Ratio</div>
 </div>
 ```
-
 
 ```html
 <!-- OK -->
@@ -99,8 +98,30 @@ module.exports = {
 
 <!-- NOOK -->
 <div class="aspect-ratio-16:9">
-  <img src="image1.jpg" class="object-cover" /> <!-- visible-->
-  <img src="image2.jpg" class="object-cover" /> <!-- hidden-->
-  <img src="image3.jpg" class="object-cover" /> <!-- hidden-->
+  <img src="image1.jpg" class="object-cover" />
+  <!-- visible-->
+  <img src="image2.jpg" class="object-cover" />
+  <!-- hidden-->
+  <img src="image3.jpg" class="object-cover" />
+  <!-- hidden-->
+</div>
+```
+
+### Min-Aspect Ratio
+
+```html
+<div class="min-aspect-ratio-16:9">
+  <p>Aspect Ratio</p>
+</div>
+
+<div class="min-aspect-ratio-16:9">
+  <p>
+    Aspect Ratio. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Eius ullam iste distinctio nobis ipsum soluta dolorem esse omnis! Architecto
+    impedit odio magni non repudiandae vitae veniam id dolorum sint eum. Lorem
+    ipsum dolor sit amet, consectetur adipisicing elit. Eius ullam iste
+    distinctio nobis ipsum soluta dolorem esse omnis! Architecto impedit odio
+    magni non repudiandae vitae veniam id dolorum sint eum.
+  </p>
 </div>
 ```
