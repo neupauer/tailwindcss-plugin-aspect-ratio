@@ -1,3 +1,6 @@
+> Due to official aspect ratio support in TailwindCSS, this package is no longer maintained, use https://github.com/tailwindlabs/tailwindcss-aspect-ratio instead
+
+
 <p align="center">
   <img src="assets/logo.png" alt="Tailwind CSS Plugin – Aspect Ratio" height="100" />
 </p>
